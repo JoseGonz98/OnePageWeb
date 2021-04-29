@@ -1,0 +1,534 @@
+.font-6 { font-size: 0.375rem !important; }
+.font-8 { font-size: 0.500rem !important; }
+.font-9 { font-size: 0.5625rem !important; }
+.font-10 { font-size: 0.625rem !important; }
+.font-11 { font-size: 0.7rem !important; }
+.font-12 { font-size: 0.750rem !important; }
+.font-14 { font-size: 0.875rem !important; }
+.font-16 { font-size: 1rem; }
+.font-18 { font-size: 1.125rem !important; }
+.font-20 { font-size: 1.250rem !important; }
+.font-21 { font-size: 1.313rem !important  }
+.font-24 { font-size: 1.5rem ; }
+.font-32 { font-size: 2rem ; }
+.font-42{font-size: 2.688rem !important;}
+.font-60{font-size: 3.75rem ;}
+.text-green{color:#6fa822 }
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*navbar*/
+
+.nav-link:hover{
+    color:#6fa822 ;
+  
+}
+
+
+.icon-btnhambugermenu{
+    height: 20px;
+    width: 20px;
+}
+
+.container-navbar{
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    -webkit-box-shadow: 0px 9px 16px -9px rgba(97,97,97,1);
+    -moz-box-shadow: 0px 9px 16px -9px rgba(97,97,97,1);
+    box-shadow: 0px 9px 16px -9px rgba(97,97,97,1);
+}
+
+.navbarProfolio{
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -o-transition: height 1s;
+    transition:  height 1s;
+    z-index: 100;
+    
+}
+
+
+.contaiener-btn-hamb{
+    position:absolute;
+    top: 35px;
+    right: 20px;
+}
+
+
+.btn-hambuger{
+    background-color:#6fa822 ;
+    border-radius: 8px;
+    border:none;
+    padding: 0.6;
+    height: 40px;
+    width: 50px;
+}
+
+.collapse-porfolio-navbar{
+    height: 380px;
+}
+
+
+/*end navbar*/
+
+
+/*other*/
+ 
+.line2{
+    width: 40px;
+    height: 3px;
+    background-color: #6fa822 ;
+
+}
+.line3{
+    width: 80px;
+    height: 3px;
+    background-color: white;
+}
+
+.robo{
+    width: 11px;
+    height: 11px;
+    background-color: black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+.trian{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 0;
+    border-color: white transparent transparent transparent;
+    margin-left: 50px;
+}
+
+
+.btn-top{
+    padding: 5px 3px;
+    background-color:#6fa822 ;
+    border: 1px solid white;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 55px;
+    display: none;
+    z-index: 100;
+}
+
+
+
+.circule{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border:2px solid white;
+    background-image: url("./assets/img/205e460b479e2e5b48aec07710c08d50.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+
+
+.btn-common{
+    height: 52px;
+    width: 200px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn-common:hover{
+    background-color:#6fa822 !important;
+    color: #ffffff !important ;
+}
+
+/*end  other*/
+
+/*serivices */
+.line-separate{
+    height: 2px;
+    width: 50px;
+    background-color: #ffffff;
+}
+
+.icon-service{
+    font-size: 44px;
+    background: #fff;
+    border: 1px solid #eee;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+}
+
+.container-icon-service{
+    line-height: 80px;
+    margin-top: -46px;
+}
+
+
+.container-services{
+    border: 1px solid ;
+    border: 1px solid #eee;
+}
+
+.container-services:hover .icon-service{
+    background-color:#6fa822 ;
+}
+
+
+h3:hover{
+    color: #6fa822 ;
+}
+
+
+.img-service-1 {
+    content: url("./assets/img/recycle-sign.svg");
+
+}
+
+.container-services:hover .img-service-1{
+    content: url("./assets/img/recycle-sign\ \(1\).svg");
+
+}
+
+.img-service-2 {
+    content: url("./assets/img/garbage-truck.svg");
+
+}
+
+.container-services:hover .img-service-2{
+    content: url("./assets/img/garbage-truck\ \(1\).svg");
+
+}
+
+.img-service-3 {
+    content: url("./assets/img/recycle-bin.svg");
+
+}
+
+.container-services:hover .img-service-3{
+    content: url("./assets/img/recycle-bin\ \(1\).svg");
+
+}
+
+
+/* end serivices */
+
+/*last proyect*/
+
+.hover-lastproyect{
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 38px;
+    font-weight: bold;
+    color:#6fa822;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+#imageProtoflio:hover>.hover-lastproyect{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+
+/* end last proyect*/
+
+
+
+/*img background*/
+.bg-img{
+    background-image: url("./assets/img/banner6.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
+}
+
+.bg-banner{
+    background-image: url("./assets/img/banner2.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+
+.bg-banner-1{
+    background-image: url("./assets/img/recicladora.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+.bg-banner-3{
+    background-image: url("./assets/img/banner3.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    padding: 30px 0;
+  
+}
+
+
+.bg-banner-4{
+    background-image: url("./assets/img/recicladoraba.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    padding: 50px 0;
+  
+}
+
+.bg-banner-5{
+    background-image: url("./assets/img/Montacargas.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  
+}
+
+/*end img background*/
+
+
+/*expert*/
+.container-socialnet{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    margin-bottom: 0;
+    text-align: center;
+    background: #6fa822 ;
+    padding: 15px 0px;
+    transform: perspective(500px) rotateX(90deg);
+    transition: all .5s;
+    transform-origin: bottom;
+    display: flex;
+    justify-content: center;
+
+}
+
+#container-team:hover .container-socialnet{
+    transform: perspective(500px) rotateX(00deg);
+  
+}
+
+/*end expert*/
+
+
+.mt-port{
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+
+.small1{
+    line-height: 0.7;
+  }
+
+
+.bg-gray-light{
+    background: #ececec;
+}
+
+.carousel-caption{
+    bottom: 30%;
+}
+
+
+
+/*hover icon social network and service */
+
+.facebook-icon{
+
+    content: url("./assets/img/facebook-app-symbol.svg");
+  
+}
+
+.facebook-icon-container:hover .facebook-icon {
+    content: url("./assets/img/facebook-app-symbol\ \(1\).svg");
+    background-color: #4267B2;
+}
+
+.facebook-icon-container:hover{
+    background-color: #4267B2;
+}
+
+.facebook-icon-container {
+    height: 36px;
+    width: 30px;
+    background-color: white;
+    border-radius: 2px;
+    border:1px solid #4267B2;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+
+
+.twitter-icon{
+    content: url("./assets/img/twitter.svg");
+}
+
+
+.twitter-icon-container:hover .twitter-icon{
+    content: url("./assets/img/twitter\ \(1\).svg");
+    background-color: #03A9F4;
+}
+
+.twitter-icon-container:hover{
+    background-color:#03A9F4;
+}
+
+.twitter-icon-container{
+    height: 36px;
+    width: 30px;
+    background-color: white;
+    border-radius: 2px;
+    border:1px solid #03A9F4;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
+  
+
+.youtube-icon{
+
+    content: url("./assets/img/youtube\ \(1\).svg");
+
+}
+
+.youtube-icon-container:hover{
+    background-color:  #FF0000;
+}
+
+.youtube-icon-container{
+    height: 36px;
+    width: 30px;
+    background-color: white;
+    border-radius: 2px;
+    border:1px solid   #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
+
+
+.linkedin-icon{
+    content: url("./assets/img/linkedin.svg");
+}
+
+
+.linkedin-icon-container:hover .linkedin-icon {
+    content: url("./assets/img/linkedin\ \(1\).svg");
+    background-color: #0084B1;
+}
+
+.linkedin-icon-container:hover{
+    background-color:#0084B1;
+}
+.linkedin-icon-container{
+    height: 36px;
+    width: 30px;
+    background-color: white;
+    border-radius: 2px;
+    border:1px solid #0084B1;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+  }
+  
+/*end hover icon social network and service */
+
+
+  @media only screen and ( min-width:763px) {
+    .navbarProfolio{
+      height: 70px;
+    }
+
+  }
+  
+
+
+  @media only screen and ( max-width:650px) {
+ 
+
+    .carousel-caption{
+        bottom: 10%;
+    }
+    
+
+  }
+
+
+  @media only screen and ( max-width:800px) {
+ 
+
+    .carousel-caption{
+        bottom: 20%;
+    }
+    
+
+  }
+
+
+
+
+
+
+
+
+ 
+
