@@ -558,7 +558,7 @@ h3:hover{
  
 
 .bg-o{
-    background-image: url("/assets/noticias/BRONCE.jpg");
+    background-image: url("./assets/noticias/BRONCE.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
 
@@ -567,7 +567,7 @@ h3:hover{
 
 
 .bg-o1{
-    background-image: url("/assets/noticias/Procesadores_1.jpg");
+    background-image: url("./assets/noticias/Procesadores_1.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
 
