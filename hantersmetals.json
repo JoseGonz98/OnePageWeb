@@ -1,0 +1,76 @@
+{
+    "success": true,
+    "data": {
+        "empresa":[ {
+            "nombre": "Hanters Metals",
+            "mision": "Para HANTER METALS, el ser humano en su integridad es un valor que está por encima de los demás  objetivos y prioridades de la empresa. Ninguna situación de emergencia, producción o resultado puede  comprometer la salud a la seguridad de las personas, la protección del medio ambiente y la calidad de los  productos y servicios.",
+            "vision": "HANTER METALS, empresa recicladora, proveedora de soluciones ambientales mediante la gestión  responsable de residuos y la transformación de los mismos en materias primas de calidad, busca la  satisfacción de socios, clientes, colaboradores, proveedores y la comunidad por medio de la mejora  continua. Para esto, actúa comprometida con calidad, con el control de los riesgos de salud y seguridad  de los colaboradores y con la gestión de aspectos de prevención de impactos ambientales por lo que ha  implementado y mantiene un sistema de gestión ambiental basado en la Norma ISO 14001:2004.",
+            "valores": "HANTER METALS, se ha comprometido a realizar sus actividades fundamentadas en objetivos y metas de  desempeño y en el cumplimiento consistente de la legislación aplicable y los compromisos asumidos,  buscando el desarrollo sostenible (ambiental, social y económico), de tal manera que se promueva la  prevención de la contaminación, la preservación de la salud y la seguridad de las personas, y la  productividad y eficacia de los procesos.",
+            "direccion": "Las  instalaciones de la empresa se encuentran en el barrio Santa Ana, de donde fueron las Delicias del Volga  2.5 cuadras al Norte.",
+            "principios": "• HANTER METALS y todos sus colaboradores se comprometen en la búsqueda mejora continua  en relación a la salud y la seguridad de las personas, la eficacia de los procesos y la satisfacción de  los clientes con la calidad de los productos y servicios. Los esfuerzos deben ser orientados a las  acciones de prevención, buscando y compartiendo las mejores prácticas y utilizando de forma  efectiva el aprendizaje en toda la organización. \r\n\r\n• El liderazgo es el principal responsable por la seguridad de todas las personas que actúan bajo  su gestión, promoviendo todos los esfuerzos necesarios para preservar la salud y la seguridad de  las personas, el desarrollo sostenible y la productividad y eficacia de los procesos. \r\n\r\n• Capacitar a cada colaborador en cuanto a su responsabilidad de cuidar por su salud y su  seguridad, así como por la de sus colegas, por medio ambiente y por la calidad de los productos y  servicios. Deben realizar su trabajo de acuerdo con los procedimientos, instrucciones, normas y  reglas establecidas por la empresa."
+        }],
+        "contactos": [
+            {
+                "tipo": "TELEFONO",
+                "contacto": "Claro: +(505) 8194-4214",
+                "url": null
+            },
+            {
+                "tipo": "TELEFONO",
+                "contacto": "Movistar: +(505) 8194-4214",
+                "url": null
+            },
+            {
+                "tipo": "CORREO ELECTRONICO",
+                "contacto": "hanters@metals.com.ni",
+                "url": null
+            },
+            {
+                "tipo": "RED SOCIAL",
+                "contacto": "Facebook",
+                "url": "http://hantersmetals.facebook.com.ni"
+            },
+            {
+                "tipo": "RED SOCIAL",
+                "contacto": "Youtube",
+                "url": "http://hantersmetals.youtube.com.ni"
+            }
+        ],
+        "servicios": [
+            {
+                "nombre": "Servicio #1",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            },
+            {
+                "nombre": "Servicio #2",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            },
+            {
+                "nombre": "Servicio #3",
+                "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            }
+        ],
+        "categorias": [
+            {
+                "nombre": "NOTICIAS DEL HOME",
+                "seccion": "NOTICIAS",
+                "noticias": [
+                    {
+                        "nombre": "Dia del Reciclaje",
+                        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        "imagen": "/assets/noticias/acero.jpg",
+                        "miniatura": "/assets/noticias/BRONCE.jpg",
+                        "fecha_creado": "2021-04-30T18:34:37.106676Z"
+                    },
+                    {
+                        "nombre": "Dia de la Madre",
+                        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        "imagen": "/assets/noticias/COBRE_BRILLANTE.jpg",
+                        "miniatura": "/assets/noticias/Procesadores_1.jpg",
+                        "fecha_creado": "2021-04-30T17:33:16.728588Z"
+                    }
+                ]
+            }
+        ]
+    }
+}

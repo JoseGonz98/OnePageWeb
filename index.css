@@ -14,6 +14,7 @@
 .font-42{font-size: 2.688rem !important;}
 .font-60{font-size: 3.75rem ;}
 .text-green{color:#6fa822 }
+.bg-green{background-color:#6fa822 }
 
 
 html {
@@ -320,7 +321,7 @@ h3:hover{
 
 
 .bg-banner-4{
-    background-image: url("./assets/img/recicladoraba.jpg");
+    background-image: url("./assets/img/Procesadores.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
     padding: 50px 0;
@@ -328,7 +329,7 @@ h3:hover{
 }
 
 .bg-banner-5{
-    background-image: url("./assets/img/Montacargas.jpg");
+    background-image: url("./assets/img/Bronce_1.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -381,7 +382,8 @@ h3:hover{
 }
 
 .carousel-caption{
-    bottom: 30%;
+    bottom: 7%;
+    left: 5%;
 }
 
 
@@ -526,9 +528,71 @@ h3:hover{
 
 
 
+.container-tabs-porfolio{
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    list-style: none;
+    flex-direction: column;
+}
 
 
+.tabs-porfolio{
+    box-sizing: content-box;
+    padding: 0;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    /*border-top: 10px solid transparent;*/
+    /*border-bottom: 10px solid transparent;*/
+    /*opacity: .5;
+    transition: opacity .6s ease;*/
+    height: 90px;
+    width: 430px;
 
+}
 
  
 
+.bg-o{
+    background-image: url("/assets/noticias/BRONCE.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
+}
+
+
+
+.bg-o1{
+    background-image: url("/assets/noticias/Procesadores_1.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
+}
+
+
+
+.position-buttonnext-prev{
+    position: absolute;
+    bottom: 0;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+ 
+ 
+}
+
+
+.scrollbar-tabs-porfolio::-webkit-scrollbar{
+
+    display: none;
+}
+
+    
