@@ -481,6 +481,7 @@ h3:hover{
 .linkedin-icon-container:hover{
     background-color:#0084B1;
 }
+
 .linkedin-icon-container{
     height: 36px;
     width: 30px;
@@ -490,54 +491,54 @@ h3:hover{
     display: flex;
     align-items: center;
     justify-content: center;   
-  }
+}
+
+
+
+.img-tabs{
+
+    width:100px;
+}
   
 /*end hover icon social network and service */
 
 
-  @media only screen and ( min-width:763px) {
-    .navbarProfolio{
-      height: 70px;
-    }
-
-  }
-  
-
-
-  @media only screen and ( max-width:650px) {
- 
-
-    .carousel-caption{
-        bottom: 10%;
-    }
-    
-
-  }
-
-
-  @media only screen and ( max-width:800px) {
- 
-
-    .carousel-caption{
-        bottom: 20%;
-    }
-    
-
-  }
-
-
-
-
-.container-tabs-porfolio{
+.carousel-indicators {
     z-index: 15;
     display: flex;
     justify-content: center;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
     list-style: none;
-    flex-direction: column;
+    position: relative;
+     
 }
+
+
+.carousel-indicators li{
+    box-sizing: content-box;
+    height: 90px;
+    width: 405px;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-indent: 0;
+     
+}
+
+
+.carousel-indicators .active{
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+    border-left: none;
+    border-right: none;
+    
+}
+
+.scroll-tabs-porfolio{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 475px; 
+    max-width:989px;
+}
+
 
 
 .tabs-porfolio{
@@ -551,7 +552,8 @@ h3:hover{
     /*opacity: .5;
     transition: opacity .6s ease;*/
     height: 90px;
-    width: 430px;
+    width: 360px;
+
 
 }
 
@@ -561,6 +563,7 @@ h3:hover{
     background-image: url("./assets/noticias/BRONCE.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
+
 
 }
 
@@ -590,9 +593,43 @@ h3:hover{
 }
 
 
-.scrollbar-tabs-porfolio::-webkit-scrollbar{
+.container-tabs-porfolio::-webkit-scrollbar{
 
-    display: none;
+   /* display: none;*/
 }
 
     
+
+
+@media only screen and ( min-width:763px) {
+    .navbarProfolio{
+      height: 70px;
+    }
+
+
+
+  }
+  
+
+
+
+  
+
+
+  @media only screen and ( max-width:650px) {
+ 
+
+    .carousel-caption{
+        bottom: 10%;
+    }
+
+    
+
+  }
+
+
+  @media only screen and ( max-width:800px) {
+    .carousel-caption{
+        bottom: 20%;
+    }
+  }
