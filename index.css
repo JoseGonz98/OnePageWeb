@@ -142,6 +142,8 @@ a{
     height: 55px;
     display: none;
     z-index: 100;
+    cursor: pointer ;
+    
 }
 
 
@@ -368,7 +370,7 @@ h3:hover{
 
 
 .mt-port{
-    margin-top: 7rem;
+    margin-top: 8rem;
     margin-bottom: 3rem;
 }
 
@@ -509,6 +511,9 @@ h3:hover{
     justify-content: center;
     list-style: none;
     position: relative;
+    padding:0 10px !important;
+    margin: 0 !important;
+
      
 }
 
@@ -516,28 +521,31 @@ h3:hover{
 .carousel-indicators li{
     box-sizing: content-box;
     height: 90px;
-    width: 405px;
-    padding: 0 !important;
+    padding:0 !important;
     margin: 0 !important;
     text-indent: 0;
+    width: 100%;
      
 }
 
 
 .carousel-indicators .active{
-    border-top: 1px solid green;
-    border-bottom: 1px solid green;
-    border-left: none;
-    border-right: none;
-    
+  
+
 }
 
 .scroll-tabs-porfolio{
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     max-height: 475px; 
     max-width:989px;
+    scroll-behavior: smooth;
 }
+
+.scroll-tabs-porfolio::-webkit-scrollbar {
+    width: 10px;
+  }
+  
 
 
 
@@ -588,7 +596,7 @@ h3:hover{
     -moz-justify-content: flex-end;
     -ms-justify-content: flex-end;
     justify-content: flex-end;
- 
+    cursor: pointer;
  
 }
 
@@ -598,38 +606,47 @@ h3:hover{
    /* display: none;*/
 }
 
-    
 
-
-@media only screen and ( min-width:763px) {
-    .navbarProfolio{
-      height: 70px;
+@media ( min-width:990px) {
+    .scroll-tabs-porfolio{
+        overflow-x: hidden;
+        overflow-y: scroll;
+     
     }
 
+  }
+
+
+  @media  ( max-width:1175px) and (min-width:992px) {
+    .mt-port{
+        margin-top: 13rem;
+    }
 
 
   }
+
+
+
+@media only screen and ( min-width:992px) {
+    .navbarProfolio{
+      height: 90px;
+    }
+
   
 
-
-
-  
+  }
 
 
   @media only screen and ( max-width:650px) {
- 
-
     .carousel-caption{
-        bottom: 10%;
+        bottom: 1%;
     }
-
-    
 
   }
 
 
   @media only screen and ( max-width:800px) {
     .carousel-caption{
-        bottom: 20%;
+        bottom: 6%;
     }
   }

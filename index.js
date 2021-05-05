@@ -1,5 +1,54 @@
 $(document).ready(function() {
 
+    const mediaqueryList = window.matchMedia("(max-width: 1054px)");
+    console.log(mediaqueryList.matches)
+
+    $("ol li").click(function (event){
+        if($(this).attr('id')==="1"){
+            $('#scroll').animate({
+                scrollTop: 0
+            }, 100);
+        
+
+        }else{
+            $('#scroll').animate({
+                scrollTop: $(this).offset().top -300
+            }, 100);
+
+     
+        }
+        
+    });
+
+
+    $("ol li").click(function (event){
+        if(mediaqueryList.matches==true){
+            if($(this).attr('id')==="1"){
+           
+                $('#caro').animate({
+                    scrollLeft: 0
+                }, -100);
+    
+            }else{
+     
+    
+                    $('#caro').animate({
+                    scrollLeft: $(this).offset().left
+                }, -100);
+            }
+        }
+        
+        
+    });
+
+  /*  $("ol li ").click(function(){
+        if ($(this).hasClass('active')){
+            $('#caro').animate({
+                scrollTop: $(this).offset().top
+            }, 100);
+        }
+    });*/
+
 
       $(window).scroll(function() {
         if ($(this).scrollTop()) {
