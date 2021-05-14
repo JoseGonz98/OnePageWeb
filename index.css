@@ -323,7 +323,7 @@ h3:hover{
 
 
 .bg-banner-4{
-    background-image: url("./assets/img/Procesadores.jpg");
+    background-image: url("./assets/img/Procesadores (1).jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
     padding: 50px 0;
@@ -549,9 +549,9 @@ h3:hover{
 
 
 
-.tabs-porfolio{
+.rtabs-porfolio{
     box-sizing: content-box;
-    padding: 0;
+    padding: 0 ;
     cursor: pointer;
     background-color: #fff;
     background-clip: padding-box;
@@ -601,12 +601,6 @@ h3:hover{
 }
 
 
-.container-tabs-porfolio::-webkit-scrollbar{
-
-   /* display: none;*/
-}
-
-
 @media ( min-width:990px) {
     .scroll-tabs-porfolio{
         overflow-x: hidden;
@@ -617,7 +611,8 @@ h3:hover{
   }
 
 
-  @media  ( max-width:1175px) and (min-width:992px) {
+
+@media  ( max-width:1175px) and (min-width:992px) {
     .mt-port{
         margin-top: 13rem;
     }
