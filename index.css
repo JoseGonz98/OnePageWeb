@@ -27,11 +27,19 @@ a{
     list-style: none;
 }
 
+p{
+        white-space: pre-line;
+}
+
 /*navbar*/
 
 .nav-link:hover{
     color:#6fa822 ;
   
+}
+
+.nav-link{
+    cursor:  pointer;
 }
 
 
