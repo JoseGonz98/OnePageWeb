@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+
+
+
+
+
     const mediaqueryList = window.matchMedia("(max-width: 1054px)");
     console.log(mediaqueryList.matches)
 
@@ -103,16 +108,27 @@ $(document).ready(function() {
     })
 
     $.ajax({
-        url:"./hantersmetals.json",
         type:"GET",
+        url:"https://hanters-metals.herokuapp.com/portal/",
+        contentType:"application/json;",
+        dataType: "json",
         success: function(data){
-            console.log(data)
+            console.log(data.data.empresa.nombre)
+            $("#aboutmision").append(`<p class="font-14">${data.data.empresa.mision}<p>`)
+            $("#aboutvision").append(`<p class="font-14">${data.data.empresa.vision}<p>`)
+            $("#aboutprincipios").append(`<p class="font-14">${data.data.empresa.principios}<p>`)
+            $("#aboutvalores").append(`<p class="font-14">${data.data.empresa.valores}<p>`)
+            $("#direccion").append(`<p>${data.data.empresa.direccion}<p>`)
          
             $.each(data,function(key,value){
+              
+              
 
-
+     
+            
                 $.each(value.servicios,function(key,value2){
-                    console.log(value2.nombre)
+          
+         
                      $("#containerServices").append(
                             `<div class="col-sm-12 col-md-4 col-lg-4 mt-5">
                             <div class="container-services d-flex flex-column p-4 ">
@@ -138,23 +154,12 @@ $(document).ready(function() {
 
 
 
-            $.each(value.empresa,function(key,value3){
-             
-
-                $("#aboutmision").append(`<p class="font-14">${value3.mision}<p>`)
-                $("#aboutvision").append(`<p class="font-14">${value3.vision}<p>`)
-                $("#aboutprincipios").append(`<p class="font-14">${value3.principios}<p>`)
-                $("#aboutvalores").append(`<p class="font-14">${value3.valores}<p>`)
-                $("#direccion").append(`<p>${value3.direccion}<p>`)
-                 console.log(value3.mision)
-         })
-
 
     
 
 
         $.each(value.contactos,function(key,contac){
-
+                console.log(key)
             if((key < 3)){
                 console.log(contac.contacto)
                 $("#contactos1").append(`
@@ -178,8 +183,93 @@ $(document).ready(function() {
 
 
 
+
+    $.ajax({
+        type:"GET",
+        url:"https://hanters-metals.herokuapp.com/portal/noticias/",
+        contentType:"application/json;",
+        dataType: "json",
+        success: function(data){
+
+            $.each(data.data,function(key,x){
+                console.log(x.noticias)
+                $.each(x.noticias,function(key,v){
+                    console.log(key)
+                    console.log(v.descripcion_corta)
+                        
+                    $(".carousel-inner").append(`
+                    <div  id="" class="carousel-item " style="border: none;">
+                    <img class="d-block w-100" src=${v.imagen} alt="1" style="height: 475px;">
+                    <div class="carousel-caption w-100 d-flex justify-content-start flex-column  font-weight-bold ">
+                
+                        <div class="d-flex justify-content-start text-white animate__animated animate__bounceInDown " style="animation-delay:1s;">
+                            <span  style="font-size:32px;">${v.nombre}</span>
+    
+                        </div>
+                        <div class="line-container d-flex  justify-content-start text-white  mb-4  animate__animated animate__bounceInUp" style="animation-delay: 0.8s;font-size:1.2vw;">
+                            <p class="small1 d-flex flex-wrap single-line">${v.descripcion}</p>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+       
+                    `)
+             
+                    $('#noticias').append(`
+
+                    
+                    <li  data-target="#carouselExampleIndicators" data-slide-to=${key} class=" tabs-porfolio  p-2  d-flex ">
+                    <img class="img-tabs h-100" src=${v.miniatura} >
+
+                    <div  class="w-100 text-dark d-lg-flex flex-column justify-content-end d-none  " style="height: 100%; width: 60%;">
+                        <span class="font-weight-bold font-24 ml-2">${v.nombre}</span>
+                        <span class="font-weight-bold font-10 text-secondary ml-2 mb-2 single-line2"  > ${v.descripcion_corta}</span>
+                    </div>
+                    </li>
+
+
+
+                    `)
+                    let linkp = $("#noticias");
+                    let link = linkp.find("li");  
+                    let item =  $(".carousel-item");
+    
+                    link.eq(0).addClass("active");
+                    item.eq(0).addClass("active");
+                  
+        
+                }
+
+      
+
+                
+                )
+          
+
+                       
+                 
+   } );
+
+
+               
+              
+    
+        
+         
+        }
+        
+    })
+
+
+
+
+    
+
+
+
+
 });
-
-
 
 

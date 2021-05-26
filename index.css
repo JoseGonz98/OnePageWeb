@@ -605,6 +605,7 @@ h3:hover{
     -ms-justify-content: flex-end;
     justify-content: flex-end;
     cursor: pointer;
+    z-index: 99;
  
 }
 
@@ -652,4 +653,51 @@ h3:hover{
     .carousel-caption{
         bottom: 6%;
     }
+  }
+
+
+
+
+
+
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+  
+
+.line-container {
+    width: 90%;
+    height: 60px;
+    text-align: start;
+  }
+  .single-line {
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-line ;
+    line-height: 15pt;        /* para la separacion entre lineas */ 
+  }
+
+  .single-line2 {
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-line ;
+    line-height: 10pt;        /* para la separacion entre lineas */ 
   }
