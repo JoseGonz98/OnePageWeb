@@ -199,7 +199,7 @@ $(document).ready(function() {
                         
                     $(".carousel-inner").append(`
                     <div  id="" class="carousel-item " style="border: none;">
-                    <img class="d-block w-100" src=${v.imagen} alt="1" style="height: 475px;">
+                    <img class="d-block w-100" src=${"."+v.imagen} alt="1" style="height: 475px;">
                     <div class="carousel-caption w-100 d-flex justify-content-start flex-column  font-weight-bold ">
                 
                         <div class="d-flex justify-content-start text-white animate__animated animate__bounceInDown " style="animation-delay:1s;">
@@ -221,7 +221,7 @@ $(document).ready(function() {
 
                     
                     <li  data-target="#carouselExampleIndicators" data-slide-to=${key} class=" tabs-porfolio  p-2  d-flex ">
-                    <img class="img-tabs h-100" src=${v.miniatura} >
+                    <img class="img-tabs h-100" src=${"."+v.miniatura} >
 
                     <div  class="w-100 text-dark d-lg-flex flex-column justify-content-end d-none  " style="height: 100%; width: 60%;">
                         <span class="font-weight-bold font-24 ml-2">${v.nombre}</span>
