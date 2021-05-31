@@ -208,8 +208,9 @@ p{
 
 
 .container-services{
-    border: 1px solid ;
     border: 1px solid #eee;
+    min-width: 320px;
+
 }
 
 .container-services:hover .icon-service{
@@ -537,10 +538,6 @@ h3:hover{
 }
 
 
-.carousel-indicators .active{
-  
-
-}
 
 .scroll-tabs-porfolio{
     overflow-x: scroll;
@@ -659,26 +656,6 @@ h3:hover{
 
 
 
-
-
-@keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
-  
-
 .line-container {
     width: 90%;
     height: 60px;
@@ -701,3 +678,10 @@ h3:hover{
     white-space: pre-line ;
     line-height: 10pt;        /* para la separacion entre lineas */ 
   }
+
+
+.bg-black-light{
+    background-color: rgba(0, 0, 0, 0.60);
+    z-index: 98;
+    left: 0;
+}
