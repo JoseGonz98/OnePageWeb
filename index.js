@@ -37,41 +37,7 @@ $(document).ready(function() {
                                 </div>
                             </div>
 
-                            <div class="col-12 col-lg-4 mt-5 d-flex justify-content-center">
-                                <div class="container-services d-flex flex-column p-4 ">
-                                    <div class="container-icon-service d-flex align-items-end">
-                                        <div class="icon-service">
-                                            <img class="img-service-1" style="height: 50px;width: 50px;">
-
-                                        </div>
-                                        <div><h3>${value2.nombre}</h3></div>
-                                    </div>
-                                
-                                    <div class="mt-3 pb-4">
-                                        <span class="">
-                                                ${value2.descripcion}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-lg-4 mt-5 d-flex justify-content-center">
-                                <div class="container-services d-flex flex-column p-4 ">
-                                    <div class="container-icon-service d-flex align-items-end">
-                                        <div class="icon-service">
-                                            <img class="img-service-1" style="height: 50px;width: 50px;">
-
-                                        </div>
-                                        <div><h3>${value2.nombre}</h3></div>
-                                    </div>
-                                
-                                    <div class="mt-3 pb-4">
-                                        <span class="">
-                                                ${value2.descripcion}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                          
                         `)
                 })
 
