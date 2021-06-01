@@ -37,6 +37,44 @@ $(document).ready(function() {
                                 </div>
                             </div>
 
+                            <div class="col-12 col-lg-4 d-flex mt-5 justify-content-center">
+                            <div class="container-services d-flex flex-column p-4 ">
+                                <div class="container-icon-service d-flex align-items-end">
+                                    <div class="icon-service">
+                                        <img class="img-service-1" style="height: 50px;width: 50px;">
+
+                                    </div>
+                                    <div><h3>${value2.nombre}</h3></div>
+                                </div>
+                            
+                                <div class="mt-3 pb-4">
+                                    <span class="">
+                                            ${value2.descripcion}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-4 d-flex mt-5 justify-content-center">
+                        <div class="container-services d-flex flex-column p-4 ">
+                            <div class="container-icon-service d-flex align-items-end">
+                                <div class="icon-service">
+                                    <img class="img-service-1" style="height: 50px;width: 50px;">
+
+                                </div>
+                                <div><h3>${value2.nombre}</h3></div>
+                            </div>
+                        
+                            <div class="mt-3 pb-4">
+                                <span class="">
+                                        ${value2.descripcion}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
                           
                         `)
                 })
@@ -82,7 +120,9 @@ $(document).ready(function() {
                         
                     $(".carousel-inner").append
                         (`
-                            <div  id="" class="carousel-item " style="border: none;">
+                            <a href="PageNews.html">
+                            <div id="news1"  class=" carousel-item " style="border: none;">
+                    
                                 <img class="d-block w-100" src=${"."+v.imagen} alt="1" style="height: 475px;">
                                 <div class="bg-black-light  carousel-caption w-100 d-flex justify-content-start flex-column  font-weight-bold ">
                             
@@ -95,9 +135,13 @@ $(document).ready(function() {
                                     </div>
 
                                 </div>
+                          
                             </div>
+                            </a>
        
                         `)
+
+                  
              
                     $('#noticias').append
                         (`
@@ -227,6 +271,8 @@ $(document).ready(function() {
     $("#Hambuger").click(function(){
         $(".navbarProfolio").toggleClass("collapse-porfolio-navbar","");
     })
+
+
 
   
 
