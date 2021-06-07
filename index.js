@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     $.ajax({
         type:"GET",
         url:"https://hanters-metals.herokuapp.com/portal/",
@@ -38,46 +39,68 @@ $(document).ready(function() {
                             </div>
 
                             <div class="col-12 col-lg-4 d-flex mt-5 justify-content-center">
-                            <div class="container-services d-flex flex-column p-4 ">
-                                <div class="container-icon-service d-flex align-items-end">
-                                    <div class="icon-service">
-                                        <img class="img-service-1" style="height: 50px;width: 50px;">
+                                <div class="container-services d-flex flex-column p-4 ">
+                                    <div class="container-icon-service d-flex align-items-end">
+                                        <div class="icon-service">
+                                            <img class="img-service-1" style="height: 50px;width: 50px;">
 
+                                        </div>
+                                        <div><h3>${value2.nombre}</h3></div>
                                     </div>
-                                    <div><h3>${value2.nombre}</h3></div>
-                                </div>
-                            
-                                <div class="mt-3 pb-4">
-                                    <span class="">
-                                            ${value2.descripcion}
-                                    </span>
+                                
+                                    <div class="mt-3 pb-4">
+                                        <span class="">
+                                                ${value2.descripcion}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <div class="col-12 col-lg-4 d-flex mt-5 justify-content-center">
-                        <div class="container-services d-flex flex-column p-4 ">
-                            <div class="container-icon-service d-flex align-items-end">
-                                <div class="icon-service">
-                                    <img class="img-service-1" style="height: 50px;width: 50px;">
+                            <div class="col-12 col-lg-4 d-flex mt-5 justify-content-center">
+                                <div class="container-services d-flex flex-column p-4 ">
+                                    <div class="container-icon-service d-flex align-items-end">
+                                        <div class="icon-service">
+                                            <img class="img-service-1" style="height: 50px;width: 50px;">
 
+                                        </div>
+                                        <div><h3>${value2.nombre}</h3></div>
+                                    </div>
+                                
+                                    <div class="mt-3 pb-4">
+                                        <span class="">
+                                                ${value2.descripcion}
+                                        </span>
+                                    </div>
                                 </div>
-                                <div><h3>${value2.nombre}</h3></div>
                             </div>
-                        
-                            <div class="mt-3 pb-4">
-                                <span class="">
-                                        ${value2.descripcion}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
 
 
                           
                         `)
                 })
+
+                $.each(value.materiales,function(key,value2){
+                    console.log("------")
+                    console.log(value2)
+          
+                    $("#containerMateriales").append
+                       (`
+                            <div id=${key} class="material col-sm-12  col-md-6 col-xl-4  d-flex justify-content-center mt-4 " >
+                                <div id="imageProtoflio" class="  d-flex justify-content-center position-relative" style="height: 370px;width: 346px;">
+                                    
+                                    <img class="" style="height: 370px;width: 100%;position: absolute;z-index: 98;" src="${value2.imagen}" >
+                                    
+                                    <div class="hover-lastproyect"><span>${value2.nombre}</span>
+                                        <span class="font-12 text-white">Managua,Nicaragua</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                       `)
+
+
+               })
 
 
 
@@ -112,18 +135,23 @@ $(document).ready(function() {
         dataType: "json",
         success: function(data){
 
+            
+
             $.each(data.data,function(key,x){
                 console.log(x.noticias)
                 $.each(x.noticias,function(key,v){
+                    console.log("----")
                     console.log(key)
                     console.log(v.descripcion_corta)
-                        
+            
+  
                     $(".carousel-inner").append
                         (`
+                          
+                            <div id=${key}  class=" carousel-item " style="border: none;">
                             <a href="PageNews.html">
-                            <div id="news1"  class=" carousel-item " style="border: none;">
-                    
                                 <img class="d-block w-100" src=${"."+v.imagen} alt="1" style="height: 475px;">
+                             
                                 <div class="bg-black-light  carousel-caption w-100 d-flex justify-content-start flex-column  font-weight-bold ">
                             
                                     <div class="d-flex ml-4 justify-content-start text-white animate__animated animate__bounceInDown " style="animation-delay:1s;">
@@ -135,11 +163,16 @@ $(document).ready(function() {
                                     </div>
 
                                 </div>
+                                </a>
                           
                             </div>
-                            </a>
-       
+                        
                         `)
+
+                        $(`#${key}`).click(function() {
+                     
+
+                         });
 
                   
              
@@ -150,10 +183,26 @@ $(document).ready(function() {
 
                                 <div  class="w-100 text-dark d-lg-flex flex-column justify-content-end d-none  " style="height: 100%; width: 60%;">
                                     <span class="font-weight-bold font-24 ml-2">${v.nombre}</span>
-                                    <span class="font-weight-bold font-10 text-secondary ml-2 mb-2 single-line2"  > ${v.descripcion_corta}</span>
+                                    <span class="font-weight-bold font-10 text-secondary ml-2 mb-2 single-line2"  >${v.descripcion_corta}</span>
                                 </div>
                             </li>
                         `)
+
+                         if(key===0){
+
+                        $('#noticiasrecientes').append
+                        (`
+                            <div class=" tabs-porfolio col-12 col-lg-6 mt-2 mb-2  d-flex flex-column ">
+                                <img class="img-tabs w-100" style="height: 150px;" src=${"."+v.miniatura} >
+                    
+                                <div  class="w-100 text-dark d-flex flex-column justify-content-end   " style="height: 100%; width: 100%;">
+                                    <span class="font-weight-bold font-24 ml-2">${v.nombre}</span>
+                                    <span class="font-weight-bold font-10 text-secondary ml-2 mb-2 single-line2">${v.descripcion_corta}</span>
+                                </div>
+                            </div>
+                        `)
+
+                         }
 
                     let linkp = $("#noticias");
                     let link = linkp.find("li");  
@@ -170,6 +219,40 @@ $(document).ready(function() {
         }
         
     })
+
+
+
+    $.ajax({
+        type:"GET",
+        url:"https://hanters-metals.herokuapp.com/portal/noticia/1/",
+        contentType:"application/json;",
+        dataType: "json",
+        success: function(data){
+            $("#titulonoticia").append
+            (`
+                <span class="mr-3">${data.data.nombre}</span>
+     
+            `)
+
+            $("#imgnoticias").append
+            (`
+                <img class="w-100" src=${"."+data.data.imagen} style="height: 700px;">
+     
+            `)
+
+            $("#noticiasdescripcion").prepend
+            (`
+                <p>${data.data.descripcion}</p>
+     
+            `)
+            
+               
+         
+        }
+        
+    })
+
+
 
 
     const mediaqueryList = window.matchMedia("(max-width: 1054px)");
@@ -210,7 +293,7 @@ $(document).ready(function() {
                 }, 100);
             }else    if($(this).attr('id')==="seccion4"){
                 $("html, body").animate({
-                    scrollTop: $("#portafolio").offset().top -100
+                    scrollTop: $("#materiales").offset().top -100
                 }, 100);
             }else    if($(this).attr('id')==="seccion5"){
                 $("html, body").animate({
@@ -274,7 +357,7 @@ $(document).ready(function() {
 
 
 
-  
+
 
 });
 
