@@ -89,7 +89,7 @@ $(document).ready(function() {
                             <div id=${key} class="material col-sm-12  col-md-6 col-xl-4  d-flex justify-content-center mt-4 " >
                                 <div id="imageProtoflio" class="  d-flex justify-content-center position-relative" style="height: 370px;width: 346px;">
                                     
-                                    <img class="" style="height: 370px;width: 100%;position: absolute;z-index: 98;" src="${value2.imagen}" >
+                                    <img class="" style="height: 370px;width: 100%;position: absolute;z-index: 98;" src="${"."+value2.imagen}" >
                                     
                                     <div class="hover-lastproyect"><span>${value2.nombre}</span>
                                         <span class="font-12 text-white">Managua,Nicaragua</span>
