@@ -12,7 +12,9 @@
 .font-24 { font-size: 1.5rem ; }
 .font-32 { font-size: 2rem ; }
 .font-42{font-size: 2.688rem !important;}
-.font-60{font-size: 3.75rem ;}
+.font-64{font-size: 4rem !important;}
+.font-68{font-size: 4.25rem !important;}
+.font-70{font-size: 4.375rem !important;}
 .text-green{color:#6fa822 }
 .bg-green{background-color:#6fa822 }
 
@@ -316,6 +318,8 @@ h3:hover{
 }
 
 
+
+
 .bg-banner-1{
     background-image: url("./assets/img/recicladora.jpg");
     background-repeat: no-repeat, repeat;
@@ -345,10 +349,29 @@ h3:hover{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+  
 
   
 }
 
+
+.bg-banner-p{
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 475px;
+    background-color: rgba(0,0,0,0.8);
+
+  
+
+    filter:brightness(0.9);
+
+
+  
+}
 /*end img background*/
 
 
@@ -589,6 +612,30 @@ h3:hover{
 
 }
 
+.bg-o2{
+    background-image: url("./assets/noticias/COBRE\ BRILLANTE.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
+}
+
+
+.bg-o3{
+    background-image: url("./assets/noticias/Radiador\ de\ Auto\ \(OCEAN\).jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
+}
+
+.bg-o4{
+    background-image: url("./assets/noticias/acero.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
+}
+
+
+
 
 
 .position-buttonnext-prev{
@@ -633,7 +680,6 @@ h3:hover{
       height: 90px;
     }
 
-  
 
   }
 
@@ -643,6 +689,8 @@ h3:hover{
         bottom: 1%;
     }
 
+
+
   }
 
 
@@ -650,6 +698,8 @@ h3:hover{
     .carousel-caption{
         bottom: 6%;
     }
+
+   
   }
 
 
@@ -690,3 +740,71 @@ h3:hover{
 .zc{
     z-index: 100;
 }
+
+
+.title-material{
+    position: absolute;
+
+    width: 100%;
+
+    height: 100% ;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+  
+}
+
+.image-p {
+    background-color: rgba(0,0,0,0.8);
+
+  
+
+    filter:brightness(0.4);
+  }
+
+  .pp{
+      max-width: 430px;
+      min-width: 200px;
+  }
+
+
+  @media only screen and ( max-width:1031px) {
+    .font-68{
+        font-size: 3.5rem !important;
+    }
+
+   
+  }
+
+  @media only screen and ( max-width:880px) {
+    .font-68{
+        font-size: 2.5rem !important;
+    }
+
+   
+  }
+
+  @media only screen and ( max-width:650px) {
+    .font-68{
+        font-size: 1.5rem !important;
+    }
+
+   
+  }
+
+
+  @media only screen and ( max-width:390px) {
+    .font-68{
+        font-size: 1.3rem !important;
+    }
+
+   
+  }
+
+  @media only screen and ( max-width:330px) {
+    .font-68{
+        font-size: 0.9rem !important;
+    }
+
+   
+  }
