@@ -355,6 +355,28 @@ h3:hover{
 }
 
 
+.bg-banner-6{
+    background-image: url("./assets/img/Bronce_1.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+  
+
+  
+}
+
+.bg-banner-23{
+   
+    background-repeat:none;
+    background-size: cover;
+    background-position: center;
+  
+
+  
+}
+
+
+
+
 .bg-banner-p{
 
     background-size: cover;

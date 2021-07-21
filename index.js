@@ -88,9 +88,8 @@ $(document).ready(function() {
                        (`
                             <div id=${key} class="material col-sm-12  col-md-6 col-xl-4  d-flex justify-content-center mt-4 " >
                                 <a href="PageMaterial.html">
-                                    <div id="imageProtoflio" class="  d-flex justify-content-center position-relative" style="height: 370px;width: 346px;">
-                                        
-                                        <img class="" style="height: 370px;width: 100%;position: absolute;z-index: 98;" src="${"."+value2.imagen}" >
+                                    <div id="imageProtoflio" style=" background-image: url(${"."+value2.imagen});height:370px;width: 346px;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
+
                                         
                                         <div class="hover-lastproyect"><span>${value2.nombre}</span>
                                             <span class="font-12 text-white">Managua,Nicaragua</span>
@@ -106,9 +105,9 @@ $(document).ready(function() {
                             <div class="col-sm-12  col-md-6  mt-4">
                                 <div style="height: 150px;" class=" ">
                                     <a href="PageMaterial.html">
-                                        <div id="imageProtoflio" class="  d-flex justify-content-center position-relative" style="height: 150px;width: 100%;">
+                                        <div style=" background-image: url(${"."+value2.imagen});height:150px;width: 100%;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
                                             
-                                            <img class="" style="height: 150px;width: 100%;position: absolute;z-index: 98;" src="${"."+value2.imagen}" >
+           
                                             
                                             <div class="hover-lastproyect"><span>${value2.nombre}</span>
                                                 <span class="font-12 text-white">Managua,Nicaragua</span>
@@ -214,7 +213,8 @@ $(document).ready(function() {
                         $('#noticiasrecientes').append
                         (`
                             <div class=" tabs-porfolio col-12 col-lg-6 mt-2 mb-2  d-flex flex-column ">
-                                <img class="img-tabs w-100" style="height: 150px;" src=${"."+v.miniatura} >
+                                <div class="bg-banner-23 " style="height: 250px;background-image: url(${"."+v.miniatura});" >
+                                </div>
                     
                                 <div  class="w-100 text-dark d-flex flex-column justify-content-end   " style="height: 100%; width: 100%;">
                                     <span class="font-weight-bold font-24 ml-2">${v.nombre}</span>
@@ -257,7 +257,8 @@ $(document).ready(function() {
 
             $("#imgnoticias").append
             (`
-                <img class="w-100" src=${"."+data.data.imagen} style="height: 475px;">
+
+                <div class="bg-banner-23 w-100" style="background-image: url(${"."+data.data.imagen});height: 475px;"></div>
      
             `)
 
