@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+        
+    let url = 'https://hanters-metals.herokuapp.com'
+
 
     $.ajax({
         type:"GET",
@@ -88,7 +91,7 @@ $(document).ready(function() {
                        (`
                             <div id=${key} class="material col-sm-12  col-md-6 col-xl-4  d-flex justify-content-center mt-4 " >
                                 <a href="PageMaterial.html">
-                                    <div id="imageProtoflio" style=" background-image: url(${"."+value2.imagen});height:370px;width: 346px;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
+                                    <div id="imageProtoflio" style=" background-image: url(${'https://hanters-metals.herokuapp.com'+value2.imagen});height:370px;width: 346px;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
 
                                         
                                         <div class="hover-lastproyect"><span>${value2.nombre}</span>
@@ -100,25 +103,29 @@ $(document).ready(function() {
                             </div>
                        `)
                        
-                       $("#containerMateriales2").append
-                       (`
-                            <div class="col-sm-12  col-md-6  mt-4">
-                                <div style="height: 150px;" class=" ">
-                                    <a href="PageMaterial.html">
-                                        <div style=" background-image: url(${"."+value2.imagen});height:150px;width: 100%;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
-                                            
-           
-                                            
-                                            <div class="hover-lastproyect"><span>${value2.nombre}</span>
-                                                <span class="font-12 text-white">Managua,Nicaragua</span>
-                                            </div>
+                        if(key!=2){
 
-                                        </div>
-                                    </a>
-                                
-                                </div>
-                            </div>
-                       `)
+                          /*  $("#containerMateriales2").append
+                            (`
+                                 <div class="col-sm-12  col-md-6  mt-4">
+                                     <div style="height: 150px;" class=" ">
+                                         <a href="PageMaterial.html">
+                                             <div style=" background-image: url(${"."+value2.imagen});height:150px;width: 100%;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
+                                                 
+                
+                                                 
+                                                 <div class="hover-lastproyect"><span>${value2.nombre+"hola"}</span>
+                                                     <span class="font-12 text-white">Managua,Nicaragua</span>
+                                                 </div>
+     
+                                             </div>
+                                         </a>
+                                     
+                                     </div>
+                                 </div>
+                            `)*/
+
+                        }
 
                })
 
@@ -170,7 +177,7 @@ $(document).ready(function() {
                           
                             <div id=${key}  class=" carousel-item " style="border: none;">
                             <a href="PageNews.html">
-                                <img class="d-block w-100" src=${"."+v.imagen} alt="1" style="height: 475px;">
+                                <img class="d-block w-100" src=${url+v.imagen} alt="1" style="height: 475px;">
                              
                                 <div class="bg-black-light  carousel-caption w-100 d-flex justify-content-start flex-column  font-weight-bold ">
                             
@@ -199,7 +206,7 @@ $(document).ready(function() {
                     $('#noticias').append
                         (`
                             <li data-target="#carouselExampleIndicators" data-slide-to=${key} class=" tabs-porfolio  p-2  d-flex ">
-                                <img class="img-tabs h-100" src=${"."+v.miniatura} >
+                                <img class="img-tabs h-100" src=${url+v.miniatura} >
 
                                 <div  class="w-100 text-dark d-lg-flex flex-column justify-content-end d-none  " style="height: 100%; width: 60%;">
                                     <span class="font-weight-bold font-24 ml-2">${v.nombre}</span>
@@ -213,7 +220,7 @@ $(document).ready(function() {
                         $('#noticiasrecientes').append
                         (`
                             <div class=" tabs-porfolio col-12 col-lg-6 mt-2 mb-2  d-flex flex-column ">
-                                <div class="bg-banner-23 " style="height: 250px;background-image: url(${"."+v.miniatura});" >
+                                <div class="bg-banner-23 " style="height: 250px;background-image: url(${url+v.miniatura});" >
                                 </div>
                     
                                 <div  class="w-100 text-dark d-flex flex-column justify-content-end   " style="height: 100%; width: 100%;">
@@ -258,7 +265,7 @@ $(document).ready(function() {
             $("#imgnoticias").append
             (`
 
-                <div class="bg-banner-23 w-100" style="background-image: url(${"."+data.data.imagen});height: 475px;"></div>
+                <div class="bg-banner-23 w-100 " style="background-image: url(${url+data.data.imagen});height: 475px;"></div>
      
             `)
 
@@ -274,6 +281,156 @@ $(document).ready(function() {
         
     })
 
+
+
+    $.ajax({
+        type:"GET",
+        url:"https://hanters-metals.herokuapp.com/portal/material/3/",
+        contentType:"application/json;",
+        dataType: "json",
+        success: function(data){
+
+            
+            $.each(data.data,function(key,x){
+
+                if(key===0){
+                    $("#title23").append
+                            
+                    (`
+                    <span  class="text-green pol">
+                    ${x.nombre}</span>
+                    </div>
+                    `)
+                }
+
+                console.log("haylago",x.nombre)
+                console.log("haylago",x.galerias)
+
+                $("#containerMateriales2").append
+                (`
+                    <div id=${key}  class="col-sm-12 mlo  col-md-6  mt-4">
+                         <div style="height: 150px;" class=" ">
+                             <a >
+                                 <div style=" background-image: url(${url+x.imagen});height:150px;width: 100%;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
+                                     
+    
+                                     
+                                     <div class="hover-lastproyect"><span>${x.nombre}</span>
+                                         <span class="font-12 text-white">Managua,Nicaragua</span>
+                                     </div>
+
+                                 </div>
+                             </a>
+                         
+                         </div>
+                     </div>
+                `)
+                    if(key===0){
+
+                   
+
+                        $.each(x.galerias,function(key,y){
+                        
+                            console.log("haylago33",y.imagen)
+        
+        
+                            $("#galeriaMateriales").append
+               
+                            (`
+                                    <div class="col-sm-12 pol col-md-6 col-xl-4 mt-4">
+                                   
+                                    <div style="height: 500px; background-image: url(${'https://hanters-metals.herokuapp.com'+y.imagen})" class="bg-banner-23 ">
+                                    
+                                    </div>
+                                </div>
+            
+                           
+                    
+                        `)
+                            
+                        })
+
+                    }
+        
+
+           
+
+
+                  
+                        $(`#${key}`).on('click', function(e){
+                            $( ".pol" ).remove();
+                        
+                            //alert("funciona")
+                            $("html, body").animate({scrollTop: 0}, 100);
+                        // e.preventDefault();
+                            //console.log(algodon)
+                    
+                            //console.log("juana la cubana"+this.id);
+                            //alert(this.id)
+                            //algodon==this.id
+                            //console.log( "123")
+                            //console.log(algodon)
+                            //return algodon
+
+                    
+                        
+                            $("#title23").append
+                            
+                            (`
+                            <span  class="text-green pol">
+                            ${x.nombre}</span>
+                            </div>
+
+                        
+
+                        `)
+
+
+
+                                    
+                   
+
+
+                                        $.each(x.galerias,function(key,y){
+                                    
+                                            console.log("haylago33",y.imagen)
+                        
+                        
+                                            $("#galeriaMateriales").append
+                            
+                                            (`
+                                                    <div class="col-sm-12 pol col-md-6 col-xl-4 mt-4">
+                                              
+                                                    <div style="height: 500px; background-image: url(${'https://hanters-metals.herokuapp.com'+y.imagen})" class="bg-banner-23 ">
+                                                    
+                                                    </div>
+                                                </div>
+                            
+                                        
+                                    
+                                        `)
+                                            
+                                        })
+                                        
+                            
+                                    
+                        })
+             
+                   
+                    
+                })
+        
+            
+               
+         
+        }
+        
+    })
+
+
+
+ 
+ 
 
 
 
@@ -315,7 +472,7 @@ $(document).ready(function() {
                 }, 100);
             }else    if($(this).attr('id')==="seccion4"){
                 $("html, body").animate({
-                    scrollTop: $("#materiales").offset().top -100
+                    scrollTop: $("#productos").offset().top -100
                 }, 100);
             }else    if($(this).attr('id')==="seccion5"){
                 $("html, body").animate({
@@ -376,6 +533,7 @@ $(document).ready(function() {
     $("#Hambuger").click(function(){
         $(".navbarProfolio").toggleClass("collapse-porfolio-navbar","");
     })
+
 
 
 
