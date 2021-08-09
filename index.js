@@ -1,8 +1,51 @@
 $(document).ready(function() {
 
+    var pathname = window.location.pathname;
+    console.log("hashPath que tal"+pathname)
         
     let url = 'https://hanters-metals.herokuapp.com'
 
+    let idMaterial=0
+
+    let idNoticias=0
+
+    let hashPath= $(location).attr('hash');  
+
+    //alert(hashPath)
+
+
+       if(hashPath==="#about"){
+        $("html, body").animate({
+            scrollTop: $("#about").offset().top +350
+        }, 100);
+    }else    if(hashPath==="#services"){
+  
+       $("html, body").animate({
+        scrollTop: $("#services").offset().top +350
+    }, 100);}
+    else    if(hashPath==="#productos"){
+  
+        $("html, body").animate({
+         scrollTop: $("#productos").offset().top +850
+     }, 100);
+
+    
+     
+    }else    if(hashPath==="#testimonio"){
+        $("html, body").animate({
+            scrollTop: $("#productos").offset().top -950
+        }, 100);
+    }else    if(hashPath==="contactus"){
+        $("html, body").animate({
+            scrollTop: $("#productos").offset().top -900
+        }, 100);
+    }else if(hashPath==="#0"){
+       idMaterial=3
+       idNoticias=2
+    }else if(hashPath ==="#1"){
+        idMaterial=2
+        idNoticias=1
+    }
 
     $.ajax({
         type:"GET",
@@ -89,8 +132,8 @@ $(document).ready(function() {
           
                     $("#containerMateriales").append
                        (`
-                            <div id=${key} class="material col-sm-12  col-md-6 col-xl-4  d-flex justify-content-center mt-4 " >
-                                <a href="PageMaterial.html">
+                            <div  id=hashPath${key} class="material col-sm-12  col-md-6 col-xl-4  d-flex justify-content-center mt-4 " >
+                                <a href="PageMaterial.html#${key}">
                                     <div id="imageProtoflio" style=" background-image: url(${'https://hanters-metals.herokuapp.com'+value2.imagen});height:370px;width: 346px;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
 
                                         
@@ -102,6 +145,8 @@ $(document).ready(function() {
                                 </a>
                             </div>
                        `)
+
+             
                        
                         if(key!=2){
 
@@ -114,7 +159,7 @@ $(document).ready(function() {
                                                  
                 
                                                  
-                                                 <div class="hover-lastproyect"><span>${value2.nombre+"hola"}</span>
+                                                 <div class="hover-lastproyect"><span>${value2.nombre+"hashPath"}</span>
                                                      <span class="font-12 text-white">Managua,Nicaragua</span>
                                                  </div>
      
@@ -176,7 +221,7 @@ $(document).ready(function() {
                         (`
                           
                             <div id=${key}  class=" carousel-item " style="border: none;">
-                            <a href="PageNews.html">
+                            <a href="PageNews.html#${key}">
                                 <img class="d-block w-100" src=${url+v.imagen} alt="1" style="height: 475px;">
                              
                                 <div class="bg-black-light  carousel-caption w-100 d-flex justify-content-start flex-column  font-weight-bold ">
@@ -184,11 +229,9 @@ $(document).ready(function() {
                                     <div class="d-flex ml-4 justify-content-start text-white animate__animated animate__bounceInDown " style="animation-delay:1s;">
                                         <span  style="font-size:32px;">${v.nombre}</span>
                                     </div>
-
                                     <div class="line-container ml-4 d-flex  justify-content-start text-white  mb-4  animate__animated animate__bounceInUp" style="animation-delay: 0.8s;font-size:1.2vw;">
                                         <p class="small1 d-flex flex-wrap single-line font-14">${v.descripcion}</p>
                                     </div>
-
                                 </div>
                                 </a>
                           
@@ -207,7 +250,6 @@ $(document).ready(function() {
                         (`
                             <li data-target="#carouselExampleIndicators" data-slide-to=${key} class=" tabs-porfolio  p-2  d-flex ">
                                 <img class="img-tabs h-100" src=${url+v.miniatura} >
-
                                 <div  class="w-100 text-dark d-lg-flex flex-column justify-content-end d-none  " style="height: 100%; width: 60%;">
                                     <span class="font-weight-bold font-24 ml-2">${v.nombre}</span>
                                     <span class="font-weight-bold font-10 text-secondary ml-2 mb-2 single-line2"  >${v.descripcion_corta}</span>
@@ -215,7 +257,9 @@ $(document).ready(function() {
                             </li>
                         `)
 
-                         if(key===0){
+                        
+
+                         if(key === (idNoticias-1) ) {
 
                         $('#noticiasrecientes').append
                         (`
@@ -249,10 +293,12 @@ $(document).ready(function() {
     })
 
 
+   
+
 
     $.ajax({
         type:"GET",
-        url:"https://hanters-metals.herokuapp.com/portal/noticia/1/",
+        url:`https://hanters-metals.herokuapp.com/portal/noticia/${idNoticias}/`,
         contentType:"application/json;",
         dataType: "json",
         success: function(data){
@@ -282,10 +328,9 @@ $(document).ready(function() {
     })
 
 
-
     $.ajax({
         type:"GET",
-        url:"https://hanters-metals.herokuapp.com/portal/material/3/",
+        url:`https://hanters-metals.herokuapp.com/portal/material/${idMaterial}/`,
         contentType:"application/json;",
         dataType: "json",
         success: function(data){
@@ -318,7 +363,6 @@ $(document).ready(function() {
                                      <div class="hover-lastproyect"><span>${x.nombre}</span>
                                          <span class="font-12 text-white">Managua,Nicaragua</span>
                                      </div>
-
                                  </div>
                              </a>
                          
@@ -380,9 +424,7 @@ $(document).ready(function() {
                             <span  class="text-green pol">
                             ${x.nombre}</span>
                             </div>
-
                         
-
                         `)
 
 
@@ -426,6 +468,11 @@ $(document).ready(function() {
         }
         
     })
+
+
+
+
+
 
 
 
