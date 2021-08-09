@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-    var pathname = window.location.pathname;
-    console.log("hashPath que tal"+pathname)
+
         
     let url = 'https://hanters-metals.herokuapp.com'
 
@@ -11,33 +10,44 @@ $(document).ready(function() {
 
     let hashPath= $(location).attr('hash');  
 
-    //alert(hashPath)
+
+     
+
+        if(hashPath==="#0"){
+            idMaterial=3
+            idNoticias=2
+         }else if(hashPath ==="#1"){
+             idMaterial=2
+             idNoticias=1
+         }
+    
+
+      
 
 
-       if(hashPath==="#about"){
+
+
+   /* if(hashPath==="#1"){
         $("html, body").animate({
-            scrollTop: $("#about").offset().top +350
+            scrollTop: $("#about").offset().top -100
         }, 100);
-    }else    if(hashPath==="#services"){
+    }else    if(hashPath==="#2"){
   
        $("html, body").animate({
-        scrollTop: $("#services").offset().top +350
+        scrollTop: $("#services").offset().top -100
     }, 100);}
-    else    if(hashPath==="#productos"){
+    else    if(hashPath==="#3"){
   
         $("html, body").animate({
          scrollTop: $("#productos").offset().top +850
-     }, 100);
-
-    
-     
-    }else    if(hashPath==="#testimonio"){
+     }, 100); 
+    }else  if(hashPath==="#4"){
         $("html, body").animate({
-            scrollTop: $("#productos").offset().top -950
+            scrollTop: $("#testimonio").offset().top +100
         }, 100);
-    }else    if(hashPath==="contactus"){
+    }else    if(hashPath==="2"){
         $("html, body").animate({
-            scrollTop: $("#productos").offset().top -900
+            scrollTop: $("#contactus").offset().top -100
         }, 100);
     }else if(hashPath==="#0"){
        idMaterial=3
@@ -45,8 +55,13 @@ $(document).ready(function() {
     }else if(hashPath ==="#1"){
         idMaterial=2
         idNoticias=1
-    }
+    }*/
 
+
+    //alert(hashPath)
+
+
+ 
     $.ajax({
         type:"GET",
         url:"https://hanters-metals.herokuapp.com/portal/",
@@ -84,42 +99,7 @@ $(document).ready(function() {
                                 </div>
                             </div>
 
-                            <div class="col-12 col-lg-4 d-flex mt-5 justify-content-center">
-                                <div class="container-services d-flex flex-column p-4 ">
-                                    <div class="container-icon-service d-flex align-items-end">
-                                        <div class="icon-service">
-                                            <img class="img-service-1" style="height: 50px;width: 50px;">
-
-                                        </div>
-                                        <div><h3>${value2.nombre}</h3></div>
-                                    </div>
-                                
-                                    <div class="mt-3 pb-4">
-                                        <span class="">
-                                                ${value2.descripcion}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-12 col-lg-4 d-flex mt-5 justify-content-center">
-                                <div class="container-services d-flex flex-column p-4 ">
-                                    <div class="container-icon-service d-flex align-items-end">
-                                        <div class="icon-service">
-                                            <img class="img-service-1" style="height: 50px;width: 50px;">
-
-                                        </div>
-                                        <div><h3>${value2.nombre}</h3></div>
-                                    </div>
-                                
-                                    <div class="mt-3 pb-4">
-                                        <span class="">
-                                                ${value2.descripcion}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                          
 
 
                           
@@ -348,6 +328,9 @@ $(document).ready(function() {
                     `)
                 }
 
+           
+                $('#holap1').css('background-image', 'url(' + url+x.imagen + ')');
+
                 console.log("haylago",x.nombre)
                 console.log("haylago",x.galerias)
 
@@ -376,6 +359,9 @@ $(document).ready(function() {
                         $.each(x.galerias,function(key,y){
                         
                             console.log("haylago33",y.imagen)
+
+
+                         $('#holap1').css('background-image', 'url(' + url+x.imagen + ')');
         
         
                             $("#galeriaMateriales").append
@@ -403,6 +389,7 @@ $(document).ready(function() {
                   
                         $(`#${key}`).on('click', function(e){
                             $( ".pol" ).remove();
+                            $('#holap1').css('background-image', 'url(' + url+x.imagen + ')');
                         
                             //alert("funciona")
                             $("html, body").animate({scrollTop: 0}, 100);
@@ -472,17 +459,15 @@ $(document).ready(function() {
 
 
 
-
-
-
-
- 
  
 
 
 
     const mediaqueryList = window.matchMedia("(max-width: 1054px)");
     console.log(mediaqueryList.matches)
+
+
+         
 
     $("ol li").click(function (event){
         if($(this).attr('id')==="1"){
@@ -499,6 +484,7 @@ $(document).ready(function() {
         }
         
     });
+
 
 
 
@@ -530,6 +516,12 @@ $(document).ready(function() {
                     scrollTop: $("#contactus").offset().top -100
                 }, 100);
             }
+
+
+            $(".navbarProfolio").toggleClass("collapse-porfolio-navbar","")
+
+
+   
    
     });
 
@@ -580,6 +572,30 @@ $(document).ready(function() {
     $("#Hambuger").click(function(){
         $(".navbarProfolio").toggleClass("collapse-porfolio-navbar","");
     })
+
+
+
+    if(hashPath==="#1"){
+        $("html, body").animate({
+            scrollTop: $("#about").offset().top +350  }, 500);
+    }else    if(hashPath==="#2"){
+  
+       $("html, body").animate({
+        scrollTop: $("#services").offset().top +350}, 500);}
+    else    if(hashPath==="#3"){
+  
+        $("html, body").animate({
+         scrollTop: $("#productos").offset().top +1300  }, 500);  
+     
+    }else    if(hashPath==="#4"){
+        $("html, body").animate({
+            scrollTop: $("#testimonio").offset().top +1700}, 500);
+    }else    if(hashPath==="#5"){
+        $("html, body").animate({
+            scrollTop: $("#contactus").offset().top +1700}, 500);
+    }
+
+
 
 
 
