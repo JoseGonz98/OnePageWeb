@@ -13,19 +13,17 @@ $(document).ready(function() {
 
 
 
-     
+    
 
         if(hashPath==="#Ferrosos"){
             idMaterial=3
-            idNoticias=2
          }else if(hashPath ==="#No%20Ferrosos" ){
              idMaterial=2
-             idNoticias=1
-         }else if(hashPath=== "#0"){
-            idMaterial=3
+         }else if(hashPath === "#Cables%20y%20Motores%20Electricos"){
+            idMaterial=1
+        }else if(hashPath=== "#0"){
             idNoticias=2
          }else if(hashPath === "#1"){
-             idMaterial=2
              idNoticias=1
          }
     
