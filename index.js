@@ -11,12 +11,20 @@ $(document).ready(function() {
     let hashPath= $(location).attr('hash');  
 
 
+
+
      
 
-        if(hashPath==="#0"){
+        if(hashPath==="#Ferrosos"){
             idMaterial=3
             idNoticias=2
-         }else if(hashPath ==="#1"){
+         }else if(hashPath ==="#No%20Ferrosos" ){
+             idMaterial=2
+             idNoticias=1
+         }else if(hashPath=== "#0"){
+            idMaterial=3
+            idNoticias=2
+         }else if(hashPath === "#1"){
              idMaterial=2
              idNoticias=1
          }
@@ -113,11 +121,11 @@ $(document).ready(function() {
                     $("#containerMateriales").append
                        (`
                             <div  id=hashPath${key} class="material col-sm-12  col-md-6 col-xl-4  d-flex justify-content-center mt-4 " >
-                                <a href="PageMaterial.html#${key}">
-                                    <div id="imageProtoflio" style=" background-image: url(${'https://hanters-metals.herokuapp.com'+value2.imagen});height:370px;width: 346px;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
+                                <a href="PageMaterial.html#${value2.nombre}">
+                                    <div id="imageProtoflio" style=" background-image: url(${'https://hanters-metals.herokuapp.com'+value2.imagen});height:370px;width: 346px;"   class="bg-banner-23  d-flex justify-content-center position-relative" >
 
                                         
-                                        <div class="hover-lastproyect"><span>${value2.nombre}</span>
+                                        <div class="hover-lastproyect text-center"><span>${value2.nombre}</span>
                                             <span class="font-12 text-white">Managua,Nicaragua</span>
                                         </div>
 
@@ -243,7 +251,7 @@ $(document).ready(function() {
 
                         $('#noticiasrecientes').append
                         (`
-                            <div class=" tabs-porfolio col-12 col-lg-6 mt-2 mb-2  d-flex flex-column ">
+                            <div id="tabsReciente${key}" class=" tabs-porfolio col-12 col-lg-6 mt-2 mb-2  d-flex flex-column ">
                                 <div class="bg-banner-23 " style="height: 250px;background-image: url(${url+v.miniatura});" >
                                 </div>
                     
@@ -253,7 +261,10 @@ $(document).ready(function() {
                                 </div>
                             </div>
                         `)
-
+                        $(`#tabsReciente${key}`).on('click', function(e){
+                            location.hash = `${key}`;
+                            location.reload(true);
+                            })
                          }
 
                     let linkp = $("#noticias");
@@ -319,6 +330,9 @@ $(document).ready(function() {
             $.each(data.data,function(key,x){
 
                 if(key===0){
+                    //$('#holap1').css({background-image:`l  url(' + url+x.imagen + ')'});
+                    //$("#hola1s").css('background-image','url(' + url+x.imagen + ')');
+                    $('#holap1').css('background-image', 'linear-gradient( rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ), url(' + url+x.imagen + ')');
                     $("#title23").append
                             
                     (`
@@ -329,7 +343,7 @@ $(document).ready(function() {
                 }
 
            
-                $('#holap1').css('background-image', 'url(' + url+x.imagen + ')');
+               
 
                 console.log("haylago",x.nombre)
                 console.log("haylago",x.galerias)
@@ -339,7 +353,7 @@ $(document).ready(function() {
                     <div id=${key}  class="col-sm-12 mlo  col-md-6  mt-4">
                          <div style="height: 150px;" class=" ">
                              <a >
-                                 <div style=" background-image: url(${url+x.imagen});height:150px;width: 100%;"  style=" background-image: url(./assets/img/Bronce_1.jpg)" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
+                                 <div style=" background-image: url(${url+x.imagen});height:150px;width: 100%;" id="imageProtoflio" class="bg-banner-23  d-flex justify-content-center position-relative" >
                                      
     
                                      
@@ -361,7 +375,7 @@ $(document).ready(function() {
                             console.log("haylago33",y.imagen)
 
 
-                         $('#holap1').css('background-image', 'url(' + url+x.imagen + ')');
+                        
         
         
                             $("#galeriaMateriales").append
@@ -389,7 +403,8 @@ $(document).ready(function() {
                   
                         $(`#${key}`).on('click', function(e){
                             $( ".pol" ).remove();
-                            $('#holap1').css('background-image', 'url(' + url+x.imagen + ')');
+                            $('#holap1').css('background-image', 'linear-gradient( rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ), url(' + url+x.imagen + ')');
+
                         
                             //alert("funciona")
                             $("html, body").animate({scrollTop: 0}, 100);
